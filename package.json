@@ -1,0 +1,38 @@
+{
+  "name": "connect123bot",
+  "version": "1.0.0",
+  "description": "Facebook BOTS integration with Salesforce",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "array-includes": "^3.0.3",
+    "body-parser": "^1.15.0",
+    "cookie-parser": "^1.4.1",
+    "cookie-session": "^1.2.0",
+    "express": "^4.13.3",
+    "express-session": "^1.13.0",
+    "nforce": "^1.4.1",
+    "promise": "^7.1.1",
+    "request": "^2.71.0"
+  },
+  "engines": {
+    "node": "4.4.4"
+  },
+  "repository": "",
+  "keywords": [
+    "Salesforce.com",
+    "Facebook",
+    "Facebook",
+    "BOTS",
+    "bots",
+    "Messenger",
+    "Nodejs",
+    "facebook",
+    "bots",
+    "heruko"
+  ],
+  "author": "Rajkiran Thummepalli (Feuji Inc.)",
+  "license": "MIT"
+}
