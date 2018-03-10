@@ -4,23 +4,23 @@
   "env": {
 	  "FB_TOKEN": {
 	        "description": "Consumer Key of your Salesforce Connected App",
-	        "value":''
+	        "value":""
 	    },
     "SF_CONSUMER_KEY": {
         "description": "Consumer Key of your Salesforce Connected App",
-        "value":''
+        "value":""
     },
     "SF_CONSUMER_SECRET": {
         "description": "Consumer Secret of your Salesforce Connected App",
-        "value":''
+        "value":""
     },
     "SF_USER": {
         "description": "Salesforce username",
-        "value":''
+        "value":""
     },
     "SF_PASSWORD": {
         "description": "Salesforce password",
-        "value":''
+        "value":""
     }
   }
 }
