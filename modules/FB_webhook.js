@@ -935,7 +935,7 @@ function processPostback(payload, sender, participant){
 		        }
 		      ];
 	 
-		 botResponse( {text: "You will not recieve further notifications from Connect-123 via bot. \n Are You Sure to Logout? ",quick_replies: quikReply} ,sender);
+		 botResponse( {text: "You will not recieve further notifications from Connect-123 via bot. \n Are You Sure to log out? ",quick_replies: quikReply} ,sender);
 	 }else if(payload == 'account_private_yes'){
 		 var cMessage = ""	;	
 		  SF.contactVisiblity(sender).then(function(results)
