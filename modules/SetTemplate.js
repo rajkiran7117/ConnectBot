@@ -119,7 +119,7 @@ var formatPhoneBook = function(phoneBook){
 						   {
 							   "type":"web_url",
 					            "url":phoneBook[0].subtitle,
-					            "title":"Enter Arrival Info"
+					            "title":"Enter Travel Dates"
 						   }
 						  ]
 					}
