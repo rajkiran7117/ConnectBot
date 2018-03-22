@@ -9,7 +9,8 @@ Promise = require('promise'),
 SFclientId = process.env.SF_CONSUMER_KEY,
 SFSecret = process.env.SF_CONSUMER_SECRET,
 SFusername = process.env.SF_USER,
-SFpassword = process.env.SF_PASSWORD
+SFpassword = process.env.SF_PASSWORD,
+SFSecurityToken = process.env.SF_SecurityToken
 
 ;
 
@@ -17,11 +18,11 @@ var AccessToken = '';
 var connection = nForceAuth.createConnection({
 	clientId: SFclientId,
 	clientSecret: SFSecret,
-	redirectUri: 'https://feuji-testing.herokuapp.com/facebook',
+	redirectUri: 'https://connect-123-bot.herokuapp.com/facebook',
 	mode: 'single',
 	autoRefresh:true});
 
-connection.authenticate({ username: SFusername, password: SFpassword }, function(err,resp){
+connection.authenticate({ username: SFusername, password: SFpassword, securityToken: SFSecurityToken }, function(err,resp){
 	 if (err) {
          console.log("Authentication error - " + err);
      } else {
