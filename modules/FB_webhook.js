@@ -61,6 +61,7 @@ function handleMessage(message,sender) {
 	availCommands.push("todo");
 	availCommands.push("person");
 	availCommands.push("documents");
+	availCommands.push("help");
 	
 	var isUserCommand; 
 	availCommands.forEach(function(command){
@@ -825,7 +826,7 @@ function processBot(message, sender,availCommands, participantId){
 		return;  
 	}
 	
-	if(message.text == 'commands'){
+	if(message.text == 'commands' || message.text == 'help'){
 		dintunderstand = false;
 		var commlist = 'Here is the list of commands available to you: \n\n'+
 						'Todo – See any pending tasks you need to complete\n\n'+
