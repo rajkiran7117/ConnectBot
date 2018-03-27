@@ -1281,7 +1281,8 @@ function botResponse(message, recipient)
                   }
     	});
     //}, 2500);
-	
+    setTimeout(
+     function() {
     	request({
      		url: 'https://graph.facebook.com/v2.6/me/messages',
      		qs: {access_token:process.env.FB_TOKEN},
@@ -1298,6 +1299,7 @@ function botResponse(message, recipient)
                      console.log('Error: ', response.body.error);
                    }
      	});
+    }, 1000);	
 }
 
 function accountUnlink(recipient)
