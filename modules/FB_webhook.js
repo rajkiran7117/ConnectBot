@@ -33,6 +33,12 @@ function handleMessage(message,sender) {
   // check greeting is here and is confident
 	
 	var attmnts = message.attachments;
+	var stickerIds = message.sticker_id;
+	console.log(stickerIds);
+	if(stickerIds == '369239263222822'){
+		botResponse({text: "Thank you so much :) "},sender);
+		return;
+	}
 	console.log("attachments "+attmnts);
 	if(attmnts != undefined){
 		console.log("attachments inside loop "+attmnts);
