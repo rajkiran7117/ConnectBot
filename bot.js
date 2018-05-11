@@ -31,6 +31,12 @@ app.get('/', function(req, res) {
   res.send('It works!');
 });
 
+app.post('/', function(req, res) {
+  console.log(req.body);
+  res.send('post works!');
+});
+
+
 app.get('/salesforce', function(req, res) {
 	  if(sf.err)
 		  {
