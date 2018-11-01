@@ -10,7 +10,7 @@ var formatAccountPrivate = function(privateAccount){
 	var isVisible = {"name":""+privateAccount[0].get("id").Name,"fbId":""+privateAccount[0].get("Facebook_PSID__c"),"preferredchannel": ""+privateAccount[0].get("Preferred_Communication_Channel__c"),"Id":""+privateAccount[0].get("Id"),"msg":"success", "visible": privateAccount[0].get("visible_to_other_interns_c__pc"), "accountId": ""+privateAccount[0].get("id"), "destination": ""+privateAccount[0].get("personaccount.destination__r ").Name };
 	
 	return isVisible;
-}
+}   
 
 var formatSendReminder = function(results){
 	console.log('formatSendReminder in set tempaltes'+JSON.stringify(results));
