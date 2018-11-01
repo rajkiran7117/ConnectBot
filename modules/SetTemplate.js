@@ -7,8 +7,9 @@ var formatAccountPrivate = function(privateAccount){
 	}
 	//log is 
 	console.log("visiblity field  is : "+privateAccount[0].get("visible_to_other_interns_c__pc" ));
+	console.log("destination is: "+privateAccount[0].get("personcontact").get("destination__r").name);
 	var isVisible = {"name":""+privateAccount[0].get("name"),"fbId":""+privateAccount[0].get("Facebook_PSID__c"),"preferredchannel": ""+privateAccount[0].get("Preferred_Communication_Channel__c"),"Id":""+privateAccount[0].get("Id"),"msg":"success", "visible": privateAccount[0].get("visible_to_other_interns_c__pc"), "destination": ""+privateAccount[0].get("personaccount.Destination__r").name };
-	console.log(isVisible);
+	console.log("json sending to sf api is --> "+isVisible);
 	return isVisible;
 }   
 
