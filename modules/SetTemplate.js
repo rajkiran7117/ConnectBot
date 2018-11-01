@@ -6,7 +6,7 @@ var formatAccountPrivate = function(privateAccount){
 		return {"msg":"Your data is not found in salesforce", "visible": "none", "accountId": "empty" ,"fbId":"empty","preferredchannel":"empty"};
 	}
 	//log is 
-	console.log("visiblity field  is : "+privateAccount[0].get("id").Visible_to_Other_Interns__c);
+	console.log("visiblity field  is : "+privateAccount[0].get("Visible_to_Other_Interns__c"));
 	var isVisible = {"name":""+privateAccount[0].get("id").Name,"fbId":""+privateAccount[0].get("Facebook_PSID__c"),"preferredchannel": ""+privateAccount[0].get("Preferred_Communication_Channel__c"),"Id":""+privateAccount[0].get("Id"),"msg":"success", "visible": privateAccount[0].get("id").Visible_to_Other_Interns__c, "accountId": ""+privateAccount[0].get("id"), "destination": ""+privateAccount[0].get("personaccount.destination__r ").Name };
 	
 	return isVisible;
@@ -81,7 +81,8 @@ var formatTodoTasks = function(results){
 }
 
 var formatCheckUser= function(privateAccount){
-	console.log('private contact in set tempaltes'+privateAccount);
+	
+	console.log('private contact in set tempaltes '+JSON.stringify(privateAccount));
 	var checkUser = [];
 	if(privateAccount.length == 0){
 		checkUser.push({"msg":"Your data is not found in salesforce", "visible": "none", "accountId": "empty" });
