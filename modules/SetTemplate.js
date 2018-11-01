@@ -1,7 +1,7 @@
 "use strict";
 var bodyParser = require('body-parser');
 var formatAccountPrivate = function(privateAccount){
-	console.log('private contact in set tempaltes '+JSON.stringify(privateAccount));
+	console.log('private contact in set tempaltes '+JSON.stringify(privateAccount ));
 	if(privateAccount.length == 0){
 		return {"msg":"Your data is not found in salesforce", "visible": "none", "accountId": "empty" ,"fbId":"empty","preferredchannel":"empty"};
 	}
