@@ -35,7 +35,7 @@ var formatGuestList = function(guestsList){
 	
 }
 
-var formatDocuments = function(results){
+var formatDocuments = function(results){ 
 	console.log('formatDocuments in set tempaltes'+JSON.stringify(results));
 	if(results.length == 0){
 		return {"msg":"no documents available", "visible": "none", "accountId": "empty" ,"fbId":"empty","preferredchannel":"empty"};
