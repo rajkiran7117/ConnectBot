@@ -131,10 +131,10 @@ var fetchContacts = function(psid){
 
 var contactVisiblity = function(PSID){
 	console.log('inside contact visibility method'+PSID);
-	
+	 
 	return new Promise(function(resolve, reject){
 		//connection.query({query: "SELECT Name, Amount FROM Opportunity where Id ='0067F000004YR3c'" }, function(err, res)
-		connection.query({query: "SELECT  Id,Name, Facebook_PSID__c, Preferred_Communication_Channel__c, Destination__pc, PersonContact.Destination__r.Name,Visible_to_Other_Interns_c__pc FROM Account WHERE Facebook_PSID__c ='"+PSID+"' And ispersonAccount =true and Account_status__c NOT IN ('Closed/Lost','Closed/Don\\'t Contact','Cancelled','Closed – Duplicate') Order By CreatedDate Desc" }, function(err, res)	
+		connection.query({query: "SELECT  Id,Name,Facebook_PSID__c, Preferred_Communication_Channel__c, Destination__pc, PersonContact.Destination__r.Name,Visible_to_Other_Interns_c__pc FROM Account WHERE Facebook_PSID__c ='"+PSID+"' And ispersonAccount =true and Account_status__c NOT IN ('Closed/Lost','Closed/Don\\'t Contact','Cancelled','Closed – Duplicate') Order By CreatedDate Desc" }, function(err, res)	
 				{
 		    if(err)
 		    { console.error(err);
