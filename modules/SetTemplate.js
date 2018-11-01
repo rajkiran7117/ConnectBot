@@ -13,7 +13,7 @@ var formatAccountPrivate = function(privateAccount){
 }   
 
 var formatSendReminder = function(results){
-	console.log('formatSendReminder in set tempaltes'+JSON.stringify(results));
+	console.log('formatSendReminder in set tempaltes'+JSON.stringify(results ));
 	return results;
 }
 
