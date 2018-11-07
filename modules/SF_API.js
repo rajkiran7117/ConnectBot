@@ -85,7 +85,7 @@ var uploadPhotos = function(jsonBodyPhoto){
 
 var unlinkAccount = function(applId){
 	console.log("reached unlinking in sf api");
-	var acc = nForceAuth.createSObject('Project__c');
+	var acc = nForceAuth.createSObject('Account');
 	acc.set('Preferred_Communication_Channel__c', 'Email');
 	acc.set('Id', applId);
 	console.log("applicant record is"+acc);
@@ -96,7 +96,7 @@ var unlinkAccount = function(applId){
 			  if(!err){ 
 				console.log('update applicant worked!'); 
 				var applupdated = resp;
-	  	    	console.log("QUERY Update for  project is");
+	  	    	console.log("QUERY Update for  Account is");
 	  	    	console.log(applupdated);
 	  	    	resolve(resp.success);
 			  }
