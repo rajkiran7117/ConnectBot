@@ -1437,7 +1437,7 @@ exports.webhookPost = function(req,res)
 				console.log("account id check is "+applDetails.accountId != "empty");
 				if(applDetails.accountId != "empty"){
 					if(applDetails.fbId != "null" && applDetails.preferredchannel != 'FbBot'){
-						var url = loginUrl+event.referral.ref; 
+						var url = loginUrl+'?id='+event.referral.ref; 
 						var loginbutton = '{'+
 					      '"type":"template",'+
 					      '"payload":{'+
@@ -1540,7 +1540,7 @@ exports.webhookPost = function(req,res)
 						console.log("formatted results in fbwebhook for referral is "+JSON.stringify(applDetails));
 						console.log("account id check is "+applDetails.accountId != "empty");
 						if(applDetails.accountId != "empty"){
-							var url = loginUrl+referral.ref; 
+							var url = loginUrl+"?id="+referral.ref; 
 							var loginbutton = '{'+
 						      '"type":"template",'+
 						      '"payload":{'+
