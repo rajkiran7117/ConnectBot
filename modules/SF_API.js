@@ -154,7 +154,7 @@ var checkExistingEmailInSf = function(PSID, participantId){
 	
 	return new Promise(function(resolve, reject){
 		//connection.query({query: "SELECT Name, Amount FROM Opportunity where Id ='0067F000004YR3c'" }, function(err, res)
-		connection.query({query: "SELECT  Id,Account__r.Name, Facebook_PSID__c, Preferred_Communication_Channel__c, Destination__c, Destination__r.Name, Account__c, Account__r.Visible_to_Other_Interns__c FROM Project__c WHERE Id= '"+participantId+"'" }, function(err, res)	
+		connection.query({query: "SELECT  Id,Name, Facebook_PSID__c, Preferred_Communication_Channel__c, Destination__pc, PersonContact.Destination__r.Name,Visible_to_Other_Interns_c__pc FROM Account WHERE Id= '"+participantId+"'" }, function(err, res)	
 				{
 		    if(err)
 		    { console.error(err);
