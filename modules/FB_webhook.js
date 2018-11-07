@@ -2,7 +2,7 @@
 var request = require('request');
 var SF = require('./SF_API');
 var ST = require('./SetTemplate');
-
+var loginUrl = process.env.login_url;
 
 exports.sf = SF;
 
@@ -1437,7 +1437,7 @@ exports.webhookPost = function(req,res)
 				console.log("account id check is "+applDetails.accountId != "empty");
 				if(applDetails.accountId != "empty"){
 					if(applDetails.fbId != "null" && applDetails.preferredchannel != 'FbBot'){
-						var url = 'https://dev-connect-123.cs13.force.com/application/facebooklogin?id='+event.referral.ref; 
+						var url = loginUrl+event.referral.ref; 
 						var loginbutton = '{'+
 					      '"type":"template",'+
 					      '"payload":{'+
@@ -1497,7 +1497,7 @@ exports.webhookPost = function(req,res)
 				}else if(payL.payload.startsWith('connect123_account_linking')){
 					var splitString = payL.payload.split("___");
 					 var msg = splitString[1];
-					 var url = 'https://dev-connect-123.cs13.force.com/application/facebooklogin';
+					 var url = loginUrl;
 					 if(msg != undefined && msg != ""){
 						 url = url+'?id='+msg;
 					 }
@@ -1540,7 +1540,7 @@ exports.webhookPost = function(req,res)
 						console.log("formatted results in fbwebhook for referral is "+JSON.stringify(applDetails));
 						console.log("account id check is "+applDetails.accountId != "empty");
 						if(applDetails.accountId != "empty"){
-							var url = 'https://dev-connect-123.cs13.force.com/application/facebooklogin?id='+referral.ref; 
+							var url = loginUrl+referral.ref; 
 							var loginbutton = '{'+
 						      '"type":"template",'+
 						      '"payload":{'+
@@ -1573,7 +1573,7 @@ exports.webhookPost = function(req,res)
 			 else if(event.postback.payload.startsWith('connect123_account_linking')){
 				 var splitString = event.postback.payload.split("___");
 				 var msg = splitString[1];
-				 var url = 'https://dev-connect-123.cs13.force.com/application/facebooklogin';
+				 var url = loginUrl;
 				 if(msg != undefined && msg != ""){
 					 url = url+'?id='+msg;
 				 }
