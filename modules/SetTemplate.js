@@ -108,7 +108,7 @@ var formatPhoneBook = function(phoneBook){
 	if(phoneBook.length == 0){
 		return {"text":"no matching interns found."};
 	}
-	if(phoneBook.length == 1){
+	if(phoneBook.length == 1){//Nov 20 :: Mallik Reddy
 		console.log("inside length 1");
 		if(phoneBook[0].title == 'Arrival Info Not Set'){
 			var attchJson =
